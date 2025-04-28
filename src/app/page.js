@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="main py-8 md:py-6 lg:py-4 flex flex-col justify-around items-center h-svh">
@@ -8,20 +10,28 @@ export default function Home() {
       </div>
       <div className="flex flex-wrap justify-evenly icon-box w-full">
         <div className="flex flex-col flex-1/2 my-4 md:flex-1/4 md:my-0 justify-end items-center">
-          <p className="text-center font-bold text-lg sm:text-xl lg:text-2xl" style={{fontFamily: '"Pinyon Script", cursive', color: "#6c416e"}}>Wedding Details</p>
-          <img className="border-2 border-[#6c416e] rounded-full w-14 h-auto sm:w-16 md:w-18 lg:w-22 bg-fuchsia-50 cursor-pointer hover:shadow-[2px_2px_2px_black]" src="rings2.svg" alt="rings icon"/>
+          <p className="text-center text-lg sm:text-xl lg:text-2xl" style={{color: "#6c416e"}}>Wedding Details</p>
+          <Link href="/wedding-details">
+            <img className="border-2 border-[#6c416e] rounded-full w-14 h-auto sm:w-16 md:w-18 lg:w-22 bg-fuchsia-50 cursor-pointer hover:shadow-[2px_2px_2px_black]" src="rings2.svg" alt="rings icon"/>
+          </Link>
         </div>
         <div className="flex flex-col flex-1/2 my-4 md:flex-1/4 md:my-0 justify-end items-center">
-          <p className="text-center font-bold text-lg sm:text-xl lg:text-2xl" style={{fontFamily: '"Pinyon Script", cursive', color: "#6c416e"}}>Wedding Entourage</p>
-          <img className="border-2 border-[#6c416e] rounded-full w-14 h-auto sm:w-16 md:w-18 lg:w-22 bg-fuchsia-50 cursor-pointer hover:shadow-[2px_2px_2px_black]" src="entourage2.svg" alt="entourage icon"/>
+          <p className="text-center text-lg sm:text-xl lg:text-2xl" style={{color: "#6c416e"}}>Wedding Entourage</p>
+          <Link href="">
+            <img className="border-2 border-[#6c416e] rounded-full w-14 h-auto sm:w-16 md:w-18 lg:w-22 bg-fuchsia-50 cursor-pointer hover:shadow-[2px_2px_2px_black]" src="entourage2.svg" alt="entourage icon"/>
+          </Link>
         </div>
         <div className="flex flex-col flex-1/2 my-4 md:flex-1/4 md:my-0 justify-end items-center">
-          <p className="text-center font-bold text-lg sm:text-xl lg:text-2xl" style={{fontFamily: '"Pinyon Script", cursive', color: "#6c416e"}}>Dress Code</p>
-          <img className="border-2 border-[#6c416e] rounded-full w-14 h-auto sm:w-16 md:w-18 lg:w-22 bg-fuchsia-50 cursor-pointer hover:shadow-[2px_2px_2px_black]" src="dress2.svg" alt="dress icon"/>
+          <p className="text-center text-lg sm:text-xl lg:text-2xl" style={{color: "#6c416e"}}>Dress Code</p>
+          <Link href="">
+            <img className="border-2 border-[#6c416e] rounded-full w-14 h-auto sm:w-16 md:w-18 lg:w-22 bg-fuchsia-50 cursor-pointer hover:shadow-[2px_2px_2px_black]" src="dress2.svg" alt="dress icon"/>
+          </Link>
         </div>
         <div className="flex flex-col flex-1/2 my-4 md:flex-1/4 md:my-0 justify-end items-center">
-          <p className="text-center font-bold text-lg sm:text-xl lg:text-2xl" style={{fontFamily: '"Pinyon Script", cursive', color: "#6c416e"}}>RSVP</p>
-          <img className="border-2 border-[#6c416e] rounded-full w-14 h-auto sm:w-16 md:w-18 lg:w-22 bg-fuchsia-50 cursor-pointer hover:shadow-[2px_2px_2px_black]" src="rsvp.svg" alt="RSVP icon"/>
+          <p className="text-center text-lg sm:text-xl lg:text-2xl" style={{color: "#6c416e"}}>RSVP</p>
+          <Link href="">
+            <img className="border-2 border-[#6c416e] rounded-full w-14 h-auto sm:w-16 md:w-18 lg:w-22 bg-fuchsia-50 cursor-pointer hover:shadow-[2px_2px_2px_black]" src="rsvp.svg" alt="RSVP icon"/>
+          </Link>
         </div>
       </div>
     </div>
