@@ -12,7 +12,7 @@ export default function Entourage() {
                     ←
                 </Link>
             </div>
-            <img className="max-h-screen" src="/entourage.JPEG" alt="entourage list"/>
+            <img className="h-dvh" src="/entourage.JPEG" alt="entourage list"/>
         </div>
     )
 }
