@@ -2,12 +2,12 @@ import Link from "next/link"
 
 export default function Entourage() {
     return (
-        <div className="flex flex-wrap items-center justify-center p-6 gap-6">
+        <div className="flex flex-wrap items-center justify-center">
             {/* Return Home Link */}
             <div className="w-full">
                 <Link
                 href="/"
-                className="text-white bg-opacity-50 px-4 py-2 rounded hover:bg-opacity-75 transition" style={{backgroundColor: "#6c416e"}}
+                className=" absolute px-4 py-2 rounded" style={{color: "#6c416e"}}
                 >
                     ←
                 </Link>
