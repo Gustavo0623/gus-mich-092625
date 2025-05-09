@@ -133,26 +133,11 @@ export default function Slideshow() {
                     </div>
                 </div>
             </div>
-
-            {/* Dots */}
-            <div className="absolute bottom-10 w-full px-4 overflow-x-auto hide-scrollbar">
-                <div className="flex space-x-2 justify-center w-max mx-auto">
-                    {images.map((_, idx) => (
-                    <button
-                        key={idx}
-                        onClick={() => setCurrent(idx)}
-                        className={`w-3 h-3 rounded-full ${
-                        idx === current ? 'bg-white' : 'bg-gray-400'
-                        }`}
-                    />
-                    ))}
-                </div>
-            </div>
             {isModalOpen && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90">
                     <button
                     onClick={() => setIsModalOpen(false)}
-                    className="absolute top-4 right-4 text-white text-2xl px-3 py-1 rounded "
+                    className="absolute top-4 right-4 text-white text-2xl bg-gray-800 bg-opacity-50 px-3 py-1 rounded hover:bg-opacity-75"
                     >
                     ✕
                     </button>
