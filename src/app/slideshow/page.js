@@ -53,29 +53,6 @@ export default function Slideshow() {
 
     const nextSlide = () => safeSetCurrent((current + 1) % total);
     const prevSlide = () => safeSetCurrent((current - 1 + total) % total);
-        
-
-    const handleTouchStart = (e) => (startX.current = e.touches[0].clientX);
-    const handleTouchMove = (e) => (endX.current = e.touches[0].clientX);
-    const handleTouchEnd = () => {
-        const deltaX = startX.current - endX.current;
-      
-        if (Math.abs(deltaX) > 50) {
-            if (deltaX > 0) {
-                nextSlide();
-            } else {
-                prevSlide();
-            }
-            // Reset refs to avoid multiple triggers
-            startX.current = 0;
-            endX.current = 0;
-        } else {
-            setIsModalOpen(true)
-        }
-    };
-
-    const startX = useRef(0);
-    const endX = useRef(0);
 
     return (
         <div
@@ -98,9 +75,7 @@ export default function Slideshow() {
                     src={images[current]}
                     alt="Slideshow"
                     className="object-contain max-h-92 transition duration-500 ease-in-out cursor-pointer"
-                    onTouchStart={handleTouchStart}
-                    onTouchMove={handleTouchMove}
-                    onTouchEnd={handleTouchEnd}
+                    onClick={()=>setIsModalOpen(true)}
                     />
                     {/* Buttons */}
                     <button
