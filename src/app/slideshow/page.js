@@ -42,6 +42,8 @@ export default function Slideshow() {
 
     const isChanging = useRef(false);
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     const safeSetCurrent = (newIdx) => {
     if (isChanging.current) return;
     isChanging.current = true;
@@ -67,6 +69,8 @@ export default function Slideshow() {
             // Reset refs to avoid multiple triggers
             startX.current = 0;
             endX.current = 0;
+        } else {
+            setIsModalOpen(true)
         }
     };
 
@@ -85,19 +89,32 @@ export default function Slideshow() {
                 ←
             </Link>
             <div 
-            className="w-full flex flex-col gap-6 max-h-screen"
+            className="w-full flex flex-col gap-6"
             >
                 <div 
-                className="w-full flex flex-col items-center gap-6"
+                className=" relative min-h-92 w-full flex flex-col justify-center items-center gap-6"
                 >
                     <img
-                        src={images[current]}
-                        alt="Slideshow"
-                        className="object-contain max-h-92 transition duration-500 ease-in-out"
-                        onTouchStart={handleTouchStart}
-                        onTouchMove={handleTouchMove}
-                        onTouchEnd={handleTouchEnd}
+                    src={images[current]}
+                    alt="Slideshow"
+                    className="object-contain max-h-92 transition duration-500 ease-in-out cursor-pointer"
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}
                     />
+                    {/* Buttons */}
+                    <button
+                        onClick={prevSlide}
+                        className="absolute left-4 text-white bg-gray-800 bg-opacity-50 px-3 py-1 rounded hover:bg-opacity-75 cursor-pointer"
+                    >
+                        ‹
+                    </button>
+                    <button
+                        onClick={nextSlide}
+                        className="absolute right-4 text-white bg-gray-800 bg-opacity-50 px-3 py-1 rounded hover:bg-opacity-75 cursor-pointer"
+                    >
+                        ›
+                    </button>
                 </div>
                 {/* Thumbnails */}
                 <div className="w-full px-4 pb-2 overflow-x-auto hide-scrollbar">
@@ -117,20 +134,6 @@ export default function Slideshow() {
                 </div>
             </div>
 
-            {/* Buttons */}
-            <button
-                onClick={prevSlide}
-                className="absolute left-4 text-white bg-gray-800 bg-opacity-50 px-3 py-1 rounded hover:bg-opacity-75 cursor-pointer"
-            >
-                ‹
-            </button>
-            <button
-                onClick={nextSlide}
-                className="absolute right-4 text-white bg-gray-800 bg-opacity-50 px-3 py-1 rounded hover:bg-opacity-75 cursor-pointer"
-            >
-                ›
-            </button>
-
             {/* Dots */}
             <div className="absolute bottom-10 w-full px-4 overflow-x-auto hide-scrollbar">
                 <div className="flex space-x-2 justify-center w-max mx-auto">
@@ -145,6 +148,21 @@ export default function Slideshow() {
                     ))}
                 </div>
             </div>
+            {isModalOpen && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90">
+                    <button
+                    onClick={() => setIsModalOpen(false)}
+                    className="absolute top-4 right-4 text-white text-2xl px-3 py-1 rounded "
+                    >
+                    ✕
+                    </button>
+                    <img
+                    src={images[current]}
+                    alt="Fullscreen"
+                    className="max-w-full max-h-full object-contain transition duration-300 ease-in-out"
+                    />
+                </div>
+            )}
         </div>
     );
 }
