@@ -79,7 +79,7 @@ export default function Slideshow() {
 
     return (
         <div
-        className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-black"
+        className="relative h-dvh w-full flex items-center justify-center overflow-hidden bg-black"
         >
             {/* Return Home Link */}
             <Link
@@ -134,13 +134,7 @@ export default function Slideshow() {
                 </div>
             </div>
             {isModalOpen && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90">
-                    <button
-                    onClick={() => setIsModalOpen(false)}
-                    className="absolute top-4 right-4 text-white text-2xl bg-gray-800 bg-opacity-50 px-3 py-1 rounded hover:bg-opacity-75"
-                    >
-                    ✕
-                    </button>
+                <div onClick={() => setIsModalOpen(false)} className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90">
                     <img
                     src={images[current]}
                     alt="Fullscreen"
