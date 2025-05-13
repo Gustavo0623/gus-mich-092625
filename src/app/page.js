@@ -1,13 +1,19 @@
+'use client';
+
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Home() {
+
+  const [showModal, setShowModal] = useState(false);
+  
   return (
     <div className="home-bg main py-8 md:py-6 lg:py-4 flex flex-col justify-around items-center h-dvh">
       <div className="text-center title text-5xl font-medium sm:text-6xl md:text-7xl lg:text-8xl" style={{fontFamily: '"Pinyon Script", cursive', color: "#6c416e"}}>Gustavo &amp; Michelle</div>
       <div className="flex flex-col items-center">
-        <Link href="/slideshow" className="flex justify-center">
-          <img src="/envelope-seal.PNG" className="w-1/2 sm:w-72 md:w-80 lg:w-96 cursor-pointer hover:drop-shadow-[2px_2px_1px_black]" alt="envlope"/>
-        </Link>
+      <div onClick={() => setShowModal(true)} className="flex justify-center cursor-pointer">
+        <img src="/envelope-seal.PNG" className="w-1/2 sm:w-72 md:w-80 lg:w-96 hover:drop-shadow-[2px_2px_1px_black]" alt="envelope" />
+      </div>
         <p className="pt-4 text-2xl font-bold sm:text-3xl lg:text-4xl" style={{fontFamily: '"Pinyon Script", cursive', color: "#6c416e"}}>September 26, 2025</p>
       </div>
       <div className="flex flex-wrap justify-evenly icon-box w-full">
@@ -36,6 +42,23 @@ export default function Home() {
           </Link>
         </div>
       </div>
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center">
+          <div className="relative bg-white rounded-lg overflow-hidden shadow-xl w-11/12 max-w-3xl">
+            <video controls autoPlay className="align-middle w-full h-auto max-h-dvh">
+              <source src="/slideshow.M4V" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <button
+              style={{ color: '#6c416e' }}
+              className="absolute top-2 left-2 text-2xl font-bold"
+              onClick={() => setShowModal(false)}
+            >
+              &times;
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
