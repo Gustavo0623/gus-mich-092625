@@ -1,8 +1,8 @@
 import Link from "next/link"
 
-export default function DressCode() {
+export default function Rsvp() {
     return (
-        <div className="DC-bg flex flex-wrap items-center justify-center h-dvh">
+        <div className="rsvp-bg flex flex-wrap items-center justify-center h-dvh">
             {/* Return Home Link */}
             <div className="absolute justify-self-start self-start w-full">
                 <Link
@@ -12,7 +12,7 @@ export default function DressCode() {
                     ←
                 </Link>
             </div>
-            <img className="w-dvw max-h-dvh lg:max-w-lg xl:max-w-1/2" src="/2nd.png" alt="attire guidelines"/>
+            <img className="w-dvw max-h-dvh lg:max-w-lg xl:max-w-1/2" src="/4th.png" alt="rsvp details"/>
         </div>
     )
 }

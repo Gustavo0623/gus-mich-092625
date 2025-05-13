@@ -2,17 +2,16 @@ import Link from "next/link"
 
 export default function Details() {
     return (
-        <div className="flex flex-wrap items-center justify-center p-6 gap-6">
-            {/* Return Home Link */}
-            <div className="w-full">
+        <div className="details-bg flex flex-wrap items-center justify-center p-6 gap-6 min-h-dvh">
+            <div className="absolute justify-self-start self-start w-full">
                 <Link
                 href="/"
-                className="text-white bg-opacity-50 px-4 py-2 rounded hover:bg-opacity-75 transition" style={{backgroundColor: "#6c416e"}}
+                className="absolute px-4 py-2 rounded" style={{color: "#6c416e"}}
                 >
                     ←
                 </Link>
             </div>
-            <img className="max-h-screen rounded-lg" src="/invite.JPG" alt="invitation"/>
+            <img className="w-dvw max-h-dvh lg:max-w-lg xl:max-w-1/2" src="/1st.png" alt="invitation"/>
             <div className="flex-1/2 flex flex-col gap-3 flex-1">
                 <div className="flex justify-evenly gap-6">
                     <p className="text-lg sm:text-2xl lg:text-4xl font-semibold text-center flex-1 max-w-72" style={{color: "#6c416e"}} >Location</p>
