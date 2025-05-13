@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function Details() {
     return (
-        <div className="details-bg flex flex-wrap items-center justify-center gap-6 min-h-dvh">
+        <div className="details-bg flex flex-wrap items-center justify-center gap-6 h-dvh overflow-scroll overscroll-contain">
             <div className="absolute justify-self-start self-start w-full">
                 <Link
                 href="/"

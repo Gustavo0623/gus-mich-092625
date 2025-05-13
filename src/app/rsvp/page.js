@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function Rsvp() {
     return (
-        <div className="rsvp-bg flex flex-wrap items-center justify-center h-dvh">
+        <div className="rsvp-bg flex flex-wrap items-center justify-center h-dvh overscroll-contain">
             {/* Return Home Link */}
             <div className="absolute justify-self-start self-start w-full">
                 <Link

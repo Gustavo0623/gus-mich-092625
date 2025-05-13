@@ -8,7 +8,7 @@ export default function Home() {
   const [showModal, setShowModal] = useState(false);
   
   return (
-    <div className="home-bg main py-8 md:py-6 lg:py-4 flex flex-col justify-around items-center h-dvh">
+    <div className="home-bg main py-8 md:py-6 lg:py-4 flex flex-col justify-around items-center h-dvh overscroll-contain">
       <div className="text-center title text-5xl font-medium sm:text-6xl md:text-7xl lg:text-8xl" style={{fontFamily: '"Pinyon Script", cursive', color: "#6c416e"}}>Gustavo &amp; Michelle</div>
       <div className="flex flex-col items-center">
       <div onClick={() => setShowModal(true)} className="flex justify-center cursor-pointer">
