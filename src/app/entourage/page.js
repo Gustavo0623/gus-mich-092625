@@ -7,7 +7,7 @@ export default function Entourage() {
             <div className="absolute justify-self-start self-start w-full">
                 <Link
                 href="/"
-                className="absolute px-4 py-2 rounded text-2xl" style={{color: "#6c416e"}}
+                className="z-10 absolute px-4 py-2 rounded text-2xl" style={{color: "#6c416e"}}
                 >
                     ←
                 </Link>
