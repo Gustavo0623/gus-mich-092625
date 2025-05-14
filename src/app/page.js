@@ -51,10 +51,10 @@ export default function Home() {
             </video>
             <button
               style={{ color: '#6c416e' }}
-              className="absolute top-2 left-2 text-2xl font-bold"
+              className="absolute top-2 left-1/2 transform -translate-x-1/2 text-2xl"
               onClick={() => setShowModal(false)}
             >
-              &times;
+              Close
             </button>
           </div>
         </div>
