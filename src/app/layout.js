@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Gus-Mich-092625",
+  title: "Gus ♾️ Mich",
   description: "Gustavo Martinez and Michelle Crodua Wedding Website",
 };
 
