@@ -50,8 +50,7 @@ export default function Home() {
               Your browser does not support the video tag.
             </video>
             <button
-              style={{ color: '#6c416e' }}
-              className="absolute top-2 left-1/2 transform -translate-x-1/2 text-2xl"
+              className="absolute text-white top-2 left-1/2 transform -translate-x-1/2 text-2xl"
               onClick={() => setShowModal(false)}
             >
               Close
