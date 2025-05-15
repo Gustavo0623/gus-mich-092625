@@ -12,7 +12,7 @@ export default function Details() {
                 </Link>
             </div>
             <img className="w-dvw max-h-dvh lg:max-w-lg xl:max-w-1/2" src="/1st.png" alt="invitation"/>
-            <div className="px-6 pb-6 flex-1/2 flex flex-col gap-3 flex-1">
+            <div className="px-6 pb-6 flex-1/2 flex flex-col gap-3 flex-1 lg:max-w-lg xl:max-w-1/2">
                 <p className="text-lg sm:text-2xl lg:text-4xl font-semibold text-center flex-1" style={{color: "#6c416e"}} >Location</p>
                 <div className="w-full h-64">
                     <iframe 
@@ -36,7 +36,7 @@ export default function Details() {
                     Open in Google Maps
                 </a>
             </div>
-            <div className="px-6 pb-6 flex-1/2 flex flex-col justify-center items-center gap-3 flex-1">
+            <div className="px-6 pb-6 flex-1/2 flex flex-col justify-center items-center gap-3 flex-1 lg:max-w-lg xl:max-w-1/2">
                 <p className="text-lg sm:text-2xl lg:text-4xl font-semibold text-center flex-1" style={{color: "#6c416e"}} >Registry</p>
                 <p className="text-lg sm:text-2xl lg:text-4xl text-center flex-1 bg-white/70 backdrop-blur-sm rounded-md px-4 py-2" style={{color: "#6c416e"}} >
                     Your presence is the greatest gift, but if you wish to favor us a present, a thoughtful monetary gift will be much appreciated and cherished as we build our future together.<br/>
@@ -45,14 +45,15 @@ export default function Details() {
             </div>
             <div className="px-6 pb-6 flex-1/2 flex flex-col justify-center items-center gap-3 flex-1">
                 <p className="text-lg sm:text-2xl lg:text-4xl font-semibold text-center flex-1" style={{color: "#6c416e"}} >Send PHP</p>
-                <img className="w-dvw lg:max-w-lg xl:max-w-1/2 rounded-lg" src="/bpi.PNG" alt="bpi qr code"/>
-                <img className="w-dvw lg:max-w-lg xl:max-w-1/2 rounded-lg" src="/gcash.JPG" alt="gcash qr code"/>
+                <img className="w-dvw lg:max-w-lg xl:max-w-1/2 rounded-lg mb-9" src="/bpi.JPEG" alt="bpi qr code"/>
+                <p className="text-lg sm:text-2xl lg:text-4xl font-semibold text-center flex-1" style={{color: "#6c416e"}} >GCash</p>
+                <img className="w-dvw lg:max-w-lg xl:max-w-1/2 rounded-lg" src="/gcash.JPEG" alt="gcash qr code"/>
             </div>
             <div className="px-6 pb-6 flex-1/2 flex flex-col justify-center items-center gap-3 flex-1">
                 <p className="text-lg sm:text-2xl lg:text-4xl font-semibold text-center flex-1" style={{color: "#6c416e"}} >Send USD</p>
                 <Link
                 href="https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fvenmo.com%2Fu%2FGusMartinez06&data=05%7C02%7C%7C2dc2b28ed88b439aabfc08dd928bc1a5%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638827851129339983%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=xaNHdu%2BFSeNx1aOaingl4wiKZkyEIyGjxmnNP5jvMeA%3D&reserved=0"
-                className="rounded" style={{color: "#6c416e"}}
+                className="rounded flex flex-col justify-center items-center" style={{color: "#6c416e"}}
                 >
                     <img className="w-dvw lg:max-w-lg xl:max-w-1/2 rounded-lg" src="/venmo.jpeg" alt="venmo qr code"/>
                 </Link>
